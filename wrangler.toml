@@ -1,13 +1,6 @@
 # Cloudflare Worker configuration
-# Deploy with: npx wrangler deploy
-
 name = "ai-proxy"
 main = "worker.js"
 
-# Free tier: 100,000 requests/day — more than enough
+# Free tier: 100,000 requests/day
 compatibility_date = "2025-05-30"
-
-# Observability (optional, free)
-observability = {
-  enabled = true
-}
