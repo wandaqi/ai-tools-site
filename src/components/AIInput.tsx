@@ -41,17 +41,26 @@ export default function AIInput({
     setResult("");
 
     try {
-      // Cloudflare Worker proxy URL (set in .env.local)
-      const proxyUrl =
-        process.env.NEXT_PUBLIC_AI_PROXY_URL ||
-        "https://ai-proxy.YOUR_SUBDOMAIN.workers.dev";
+      const apiKey = process.env.NEXT_PUBLIC_DEEPSEEK_API_KEY;
+      if (!apiKey) {
+        throw new Error("API key not configured. Please set NEXT_PUBLIC_DEEPSEEK_API_KEY.");
+      }
 
-      const response = await fetch(proxyUrl, {
+      const messages: Array<{ role: string; content: string }> = [];
+      if (systemPrompt) {
+        messages.push({ role: "system", content: systemPrompt });
+      }
+      messages.push({ role: "user", content: input.trim() });
+
+      const response = await fetch("https://api.deepseek.com/v1/chat/completions", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
         body: JSON.stringify({
-          prompt: input.trim(),
-          system: systemPrompt,
+          model: "deepseek-chat",
+          messages,
           max_tokens: maxTokens,
           temperature,
         }),
@@ -60,10 +69,11 @@ export default function AIInput({
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || `Error: ${response.status}`);
+        const errMsg = data.error?.message || `Error: ${response.status}`;
+        throw new Error(errMsg);
       }
 
-      setResult(data.result || "No output generated.");
+      setResult(data.choices?.[0]?.message?.content || "No output generated.");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     } finally {

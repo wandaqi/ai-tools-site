@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_AI_PROXY_URL: ${{ secrets.NEXT_PUBLIC_AI_PROXY_URL }}
+          NEXT_PUBLIC_DEEPSEEK_API_KEY: ${{ secrets.NEXT_PUBLIC_DEEPSEEK_API_KEY }}
           NEXT_PUBLIC_BASE_PATH: /ai-tools-site
 
       - name: Deploy to GitHub Pages
