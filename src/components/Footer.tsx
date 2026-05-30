@@ -22,11 +22,18 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-slate-800 mb-3">About</h3>
-            <p className="text-sm text-slate-500">
-              We build free, fast, and privacy-focused online tools to help you work smarter.
-              No data is stored on our servers.
+            <h3 className="font-bold text-slate-800 mb-3">Support Us</h3>
+            <p className="text-sm text-slate-500 mb-2">
+              All tools are free. If you find them useful, buy us a coffee ☕
             </p>
+            <a
+              href="https://afdian.com/a/%E7%94%B5%E5%8E%82"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm px-4 py-2 bg-amber-100 text-amber-700 rounded-lg hover:bg-amber-200 transition-colors font-medium"
+            >
+              ☕ Support on Afdian
+            </a>
           </div>
         </div>
         <div className="mt-8 pt-4 border-t border-slate-100 text-center text-sm text-slate-400">
