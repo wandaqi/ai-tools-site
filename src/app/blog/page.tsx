@@ -9,6 +9,33 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-developer-tools-no-signup",
+    title: "15 Best Free Online Developer Tools in 2025 (No Sign-Up, No Tracking)",
+    excerpt:
+      "A curated list of the best free online tools for developers: JSON formatters, password generators, color palettes, word counters, and AI writing tools. All privacy-first.",
+    date: "2025-05-30",
+    readTime: "7 min read",
+    category: "Tools",
+  },
+  {
+    slug: "json-formatter-comparison",
+    title: "Best JSON Formatter Tools Compared: Why Every Developer Needs One",
+    excerpt:
+      "Compare the top free JSON formatter tools in 2025. Learn why JSON formatting matters, common errors to avoid, and which tools actually respect your privacy.",
+    date: "2025-05-28",
+    readTime: "6 min read",
+    category: "JSON",
+  },
+  {
+    slug: "online-tools-privacy",
+    title: "Browser-Based Tools Are the Future: Why Privacy Matters in Online Tools",
+    excerpt:
+      "Server-based tools can log your data. Browser-based tools keep everything local. Learn why privacy-first tools are gaining traction in 2025.",
+    date: "2025-05-26",
+    readTime: "5 min read",
+    category: "Privacy",
+  },
+  {
     slug: "best-free-ai-writing-tools",
     title: "10 Best Free AI Writing Tools in 2025 (No Sign-Up Required)",
     excerpt:

@@ -50,4 +50,24 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://wandaqi.github.io/ai-tools-site/blog/best-developer-tools-no-signup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wandaqi.github.io/ai-tools-site/blog/json-formatter-comparison</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wandaqi.github.io/ai-tools-site/blog/online-tools-privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wandaqi.github.io/ai-tools-site/blog/best-free-ai-writing-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
